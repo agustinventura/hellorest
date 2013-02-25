@@ -29,5 +29,11 @@ public class Hello {
     return "<html> " + "<title>" + "Hello Jersey" + "</title>"
         + "<body><h1>" + "Hello Jersey" + "</body></h1>" + "</html> ";
   }
+  
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public String sayJsonHello() {
+	  return "{\"respuesta\": \"Hello Jersey\"}";
+  }
 
 } 
